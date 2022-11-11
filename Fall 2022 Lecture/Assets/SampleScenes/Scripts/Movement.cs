@@ -10,7 +10,8 @@ public class Movement : MonoBehaviour
 	[SerializeField] bool isFacingRight = true;
 	[SerializeField] bool jumpPressed = false;
 	[SerializeField] float jumpForce = 500.0f;
-	[SerializeField] bool isGrounded = true;
+	// [SerializeField] bool isGrounded = true;
+
 
     // Start is called before the first frame update
     void Start()
@@ -52,12 +53,12 @@ public class Movement : MonoBehaviour
 		rigid.velocity = new Vector2(rigid.velocity.x, 0);
 		rigid.AddForce(new Vector2(0, jumpForce));
 		jumpPressed = false;
-		isGrounded = false;
+		// isGrounded = false;
 	}
 
-    void OnCollisionEnter2D (Collision2D collision)
-	{
-		if (collision.gameObject.tag == "Ground")
-			isGrounded = true;
-	}
+    // void OnCollisionEnter2D (Collision2D collision)
+	// {
+	// 	if (collision.gameObject.tag == "Ground")
+	// 		isGrounded = true;
+	// }
 }
