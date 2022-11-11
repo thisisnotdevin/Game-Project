@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     public int health = 50;
 
     public GameObject deathEffect;
-    public AudioSource audioPlayer;
+    public AudioClip audioPlayer;
+
     // Start is called before the first frame update
 
     public void TakeDamage (int damage)
@@ -27,6 +28,6 @@ public class Enemy : MonoBehaviour
      ScoreScript.scoreValue += 10;
      Instantiate(deathEffect, transform.position, Quaternion.identity);
      Destroy(gameObject);
-     audioPlayer.Play();
+     AudioSource.PlayClipAtPoint (audioPlayer, transform.position);
     }
 }

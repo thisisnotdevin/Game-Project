@@ -156,4 +156,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 50
   deathEffect: {fileID: 4935236886145934396, guid: 7c93d2891646344e49fe5a77f819edde, type: 3}
-  audioPlayer: {fileID: 2366039187492757086, guid: 55a5a5efbe17341748e58b3957dfddbe, type: 3}
+  audioPlayer: {fileID: 8300000, guid: 1ed0839b7bc2749acb0115e7870be83e, type: 3}
