@@ -27,6 +27,8 @@ public class ScoreScript : MonoBehaviour
        if(scoreValue == 50)
        {
            SceneManager.LoadScene(nextScene);
+           scoreValue = 0;
        }
+       
     }
 }
