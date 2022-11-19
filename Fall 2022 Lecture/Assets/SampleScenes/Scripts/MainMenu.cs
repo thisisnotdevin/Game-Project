@@ -21,10 +21,15 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Instructions");
     }
-    public void InstructionsGoBack()
+    public void MenuGoBack()
     {
         SceneManager.LoadScene("StartMenu");
     }
+    public void GameSettings()
+    {
+        SceneManager.LoadScene("Settings");
+    }
+    
     public void QuitGame() {
         Application.Quit();
     }
