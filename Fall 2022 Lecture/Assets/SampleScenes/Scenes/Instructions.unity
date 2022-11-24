@@ -182,15 +182,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Instructions:
 
-    1. pop the ballons to advance to next level
+    1. you need to eliminate all the ballons
 
 
-    2.
-    level gets harder, less platform
+    2. level
+    gets harder, less platform
 
 
-    3. blue balloon guy is friend, dont pop
-    him pls'
+    3. blue balloon guy is my friend, dont pop him
+    pls'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}

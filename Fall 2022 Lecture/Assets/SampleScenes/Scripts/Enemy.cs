@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     void Die ()
     {
      ScoreScript.scoreValue += 10;
+     PersistentData.Instance.SetScore(ScoreScript.scoreValue += 10);
      Instantiate(deathEffect, transform.position, Quaternion.identity);
      Destroy(gameObject);
      AudioSource.PlayClipAtPoint (audioPlayer, transform.position);

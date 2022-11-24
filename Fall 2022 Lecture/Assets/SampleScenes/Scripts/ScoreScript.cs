@@ -10,13 +10,14 @@ public class ScoreScript : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public static int scoreValue;
+    public static int tempScoreValue = 20;
     private int nextScene;
-   
-
+    
 
     void Start()
     {
-        scoreText = GetComponent<TextMeshProUGUI>();
+       scoreValue = PersistentData.Instance.GetScore();
+       scoreText = GetComponent<TextMeshProUGUI>();
        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
@@ -24,11 +25,20 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + scoreValue;
-       if(scoreValue == 50)
+       if(scoreValue == tempScoreValue)
        {
            SceneManager.LoadScene(nextScene);
-           scoreValue = 0;
+           tempScoreValue += 20;
+       }
+       if(scoreValue == 70){
+           QuitGame();
+           Application.Quit();
        }
        
+    }
+    
+    public void QuitGame()
+    {
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
