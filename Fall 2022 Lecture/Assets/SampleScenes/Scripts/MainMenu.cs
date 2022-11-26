@@ -14,10 +14,11 @@ public class MainMenu : MonoBehaviour
     // {
     //     nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
     // }
-    
+    [SerializeField] InputField playerNameInput;
     public void PlayGame()
     {
-        
+        string s = playerNameInput.text;
+        PersistentData.Instance.SetName(s);
         SceneManager.LoadScene("Scene1");
 
     }

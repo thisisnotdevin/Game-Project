@@ -10,7 +10,7 @@ public class ScoreScript : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public static int scoreValue;
-    public static int tempScoreValue = 20;
+    public static int tempScoreValue = 50;
     private int nextScene;
     
 
@@ -28,15 +28,16 @@ public class ScoreScript : MonoBehaviour
        if(scoreValue == tempScoreValue)
        {
            SceneManager.LoadScene(nextScene);
-           tempScoreValue += 20;
+           tempScoreValue += 50;
        }
-       if(scoreValue == 70){
+       if(scoreValue == 300){ //doesnt get called because of the previous function
            QuitGame();
            Application.Quit();
        }
        
     }
-    
+     
+
     public void QuitGame()
     {
         UnityEditor.EditorApplication.isPlaying = false;
