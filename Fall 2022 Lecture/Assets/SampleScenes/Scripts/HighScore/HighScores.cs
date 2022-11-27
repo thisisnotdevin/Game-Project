@@ -81,7 +81,7 @@ public class HighScores : MonoBehaviour
 
     public void ShowHighScores()
     {
-        for (int i = 0; i <= NUM_HIGH_SCORES; i++)
+        for (int i = 0; i < NUM_HIGH_SCORES; i++)
         {
             Debug.Log(i + " ");
             nameTexts[i].text = PlayerPrefs.GetString(NAME_KEY + (i + 1));

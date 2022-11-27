@@ -26,7 +26,7 @@ public class Friendly : MonoBehaviour
     // Update is called once per frame
     void Die ()
     {
-     ScoreScript.scoreValue -= 10;
+     //ScoreScript.scoreValue -= 10;
      PersistentData.Instance.SetScore(ScoreScript.scoreValue -= 10);
      
      Instantiate(deathEffect, transform.position, Quaternion.identity);
