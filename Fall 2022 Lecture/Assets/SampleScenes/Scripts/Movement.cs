@@ -11,19 +11,21 @@ public class Movement : MonoBehaviour
 	[SerializeField] bool jumpPressed = false;
 	[SerializeField] float jumpForce = 500.0f;
 	// [SerializeField] bool isGrounded = true;
-
+	private Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
+		anim = GetComponent<Animator>();
 		if (rigid == null)
-			rigid = GetComponent<Rigidbody2D>();
+			rigid = GetComponent<Rigidbody2D>(); //animation
     }
 
     // Update is called once per frame
     //good for user input
     void Update()
     {
+		AnimationControl(); //animation
 		movement = Input.GetAxis("Horizontal");
         if (Input.GetButtonDown("Jump"))
 			jumpPressed = true;
@@ -38,7 +40,6 @@ public class Movement : MonoBehaviour
 		if ((movement < 0 && isFacingRight) || (movement > 0 && !isFacingRight))
 			Flip();
 		if (jumpPressed)
-
 			Jump();
 	}
 
@@ -53,9 +54,20 @@ public class Movement : MonoBehaviour
 		rigid.velocity = new Vector2(rigid.velocity.x, 0);
 		rigid.AddForce(new Vector2(0, jumpForce));
 		jumpPressed = false;
-		// isGrounded = false;
+		//  isGrounded = false;
 	}
-
+	private void AnimationControl()
+	{
+		if(rigid.velocity.y == 0 && rigid.velocity.x ==0)
+		{
+			anim.Play("IdleAnim");
+		}
+		if(rigid.velocity.y != 0 || rigid.velocity.x !=0 )
+		{
+			anim.Play("RunAnim");
+		}
+		
+	}
     // void OnCollisionEnter2D (Collision2D collision)
 	// {
 	// 	if (collision.gameObject.tag == "Ground")
