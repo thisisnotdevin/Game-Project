@@ -6,7 +6,7 @@ public class Weapon : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-   
+    public AudioClip audioPlayer; 
     // Update is called once per frame
     void Update()
     {
@@ -15,8 +15,8 @@ public class Weapon : MonoBehaviour
          Shoot();
      }
      void Shoot () {
-        
-         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        AudioSource.PlayClipAtPoint (audioPlayer, transform.position);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
      }
 
     }
