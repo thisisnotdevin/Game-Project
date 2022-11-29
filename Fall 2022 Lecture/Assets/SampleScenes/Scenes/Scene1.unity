@@ -1264,7 +1264,7 @@ RectTransform:
   m_Children:
   - {fileID: 1772292184}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2890,6 +2890,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3172361870373289156, guid: aba2247c8392644a68b76eec59721786, type: 3}
+      propertyPath: damage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8140508287765470929, guid: aba2247c8392644a68b76eec59721786, type: 3}
       propertyPath: audioPlayer
       value: 
@@ -2995,7 +2999,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3127922532941388702, guid: 52449a09463664db0844445e63a1567a, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3127922532941388702, guid: 52449a09463664db0844445e63a1567a, type: 3}
       propertyPath: m_LocalScale.x
@@ -4194,7 +4198,7 @@ Transform:
   m_LocalScale: {x: 3.18, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1862315090
 GameObject:

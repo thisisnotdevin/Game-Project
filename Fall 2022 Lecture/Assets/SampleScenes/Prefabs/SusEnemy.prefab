@@ -142,6 +142,8 @@ MonoBehaviour:
   maxSize: 1
   isMaxSize: 0
   deathEffect: {fileID: 4935236886145934396, guid: 7c93d2891646344e49fe5a77f819edde, type: 3}
+  audioPlayer: {fileID: 8300000, guid: 1ed0839b7bc2749acb0115e7870be83e, type: 3}
+  damage: 0
 --- !u!114 &8140508287765470929
 MonoBehaviour:
   m_ObjectHideFlags: 0

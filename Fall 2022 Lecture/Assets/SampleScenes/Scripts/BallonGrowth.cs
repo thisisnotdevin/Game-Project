@@ -9,7 +9,8 @@ public class BallonGrowth : MonoBehaviour
     public float maxSize = 2f;
     public bool isMaxSize = false;
     public GameObject deathEffect;
-
+    public AudioClip audioPlayer;
+    [SerializeField] int damage = 5;
     void Start()
     {
        if(isMaxSize == false){
@@ -34,8 +35,10 @@ public class BallonGrowth : MonoBehaviour
         isMaxSize = true;
         if(isMaxSize == true)
         {
+            PersistentData.Instance.SetScore(ScoreScript.scoreValue -= damage);
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            AudioSource.PlayClipAtPoint (audioPlayer, transform.position);
          
         }
     }

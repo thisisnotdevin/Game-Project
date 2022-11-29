@@ -25,7 +25,7 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         scoreText.text = "Score: " + scoreValue;
-       if(scoreValue == tempScoreValue)
+       if(scoreValue >= tempScoreValue)
        {
            SceneManager.LoadScene(nextScene);
            tempScoreValue += 50;

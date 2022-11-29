@@ -62,10 +62,11 @@ public class Movement : MonoBehaviour
 		{
 			anim.Play("IdleAnim");
 		}
-		if(rigid.velocity.y != 0 || rigid.velocity.x !=0 )
+		if(rigid.velocity.y != 0 || rigid.velocity.x !=0 && !jumpPressed)
 		{
 			anim.Play("RunAnim");
 		}
+		
 		
 	}
     // void OnCollisionEnter2D (Collision2D collision)
