@@ -906,7 +906,6 @@ MonoBehaviour:
   isFacingRight: 1
   jumpPressed: 0
   jumpForce: 500
-  isGrounded: 1
 --- !u!50 &954839476
 Rigidbody2D:
   serializedVersion: 4
@@ -1423,6 +1422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1914749758}
   bulletPrefab: {fileID: 1564505026907850244, guid: 70bd84c78c5d245aabc970d4ade7cb27, type: 3}
+  audioPlayer: {fileID: 0}
 --- !u!1001 &4935236884964665047
 PrefabInstance:
   m_ObjectHideFlags: 0
