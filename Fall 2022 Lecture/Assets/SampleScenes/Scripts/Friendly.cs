@@ -27,7 +27,7 @@ public class Friendly : MonoBehaviour
     void Die ()
     {
      //ScoreScript.scoreValue -= 10;
-     PersistentData.Instance.SetScore(ScoreScript.scoreValue -= 10);
+     PersistentData.Instance.SetLives(ScoreScript.LivesValue -= 1);
      
      Instantiate(deathEffect, transform.position, Quaternion.identity);
      Destroy(gameObject);

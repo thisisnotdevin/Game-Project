@@ -462,7 +462,7 @@ RectTransform:
   m_GameObject: {fileID: 1313535213}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1675338426}
   m_RootOrder: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1f16052dfd5f6f54e94e97ecedd4c86b, type: 3}
-    m_FontSize: 88
+    m_FontSize: 79
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -580,8 +580,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Instructions:\n1. you need to eliminate all the ballons\n\n2. level gets
-    harder, less platform\n\n3. blue balloon guy is my friend, \ndon't pop him pls"
+  m_Text: "Instructions:\n1. you need to eliminate all the ballons, beach balls \ngive
+    more points but they are scared of you\n\n2. every level is unique and it gets
+    harder\n\n3. blue balloon guy is our friend so dont pop him"
 --- !u!222 &1325071507
 CanvasRenderer:
   m_ObjectHideFlags: 0

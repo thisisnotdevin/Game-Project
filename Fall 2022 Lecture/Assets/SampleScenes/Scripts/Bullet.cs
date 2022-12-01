@@ -22,7 +22,18 @@ public class Bullet : MonoBehaviour
             enemy.TakeDamage(damage);
         }
         Destroy(gameObject); 
+        
+        MegaEnemy Megaenemy = hitInfo.GetComponent<MegaEnemy>();
+        if (Megaenemy != null){
+            Megaenemy.TakeDamage(damage);
+        }
+        Destroy(gameObject); 
 
+        ChasingEnemy chasingEnemy = hitInfo.GetComponent<ChasingEnemy>();
+        if (chasingEnemy != null){
+            chasingEnemy.TakeDamage(damage);
+        }
+        Destroy(gameObject); 
 
         Friendly friend = hitInfo.GetComponent<Friendly>();
         if (friend != null){

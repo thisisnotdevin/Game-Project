@@ -10,6 +10,7 @@ public class ScoreScript : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public static int scoreValue;
+    public static int LivesValue;
     public static int tempScoreValue = 50;
     private int nextScene;
     
@@ -17,6 +18,7 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
        scoreValue = PersistentData.Instance.GetScore();
+       LivesValue = PersistentData.Instance.GetLives();
        scoreText = GetComponent<TextMeshProUGUI>();
        nextScene = SceneManager.GetActiveScene().buildIndex + 1;
     }
@@ -24,15 +26,11 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = "Score: " + scoreValue;
+        scoreText.text = "Score: " + scoreValue + "\n Lives: " + LivesValue;
        if(scoreValue >= tempScoreValue)
        {
            SceneManager.LoadScene(nextScene);
-           tempScoreValue += 50;
-       }
-       if(scoreValue == 300){ //doesnt get called because of the previous function
-           QuitGame();
-           Application.Quit();
+           tempScoreValue += 100;
        }
        
     }
