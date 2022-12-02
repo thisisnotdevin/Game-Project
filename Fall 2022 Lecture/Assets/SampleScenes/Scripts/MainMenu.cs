@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
     {
         string s = playerNameInput.text;
         PersistentData.Instance.SetName(s);
-        SceneManager.LoadScene("Scene1");
+        SceneManager.LoadScene("Intro");
 
     }
     public void GameInstructions()

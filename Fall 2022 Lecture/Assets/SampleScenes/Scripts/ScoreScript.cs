@@ -30,7 +30,7 @@ public class ScoreScript : MonoBehaviour
        if(scoreValue >= tempScoreValue)
        {
            SceneManager.LoadScene(nextScene);
-           tempScoreValue += 100;
+           tempScoreValue += 50;
        }
        
     }

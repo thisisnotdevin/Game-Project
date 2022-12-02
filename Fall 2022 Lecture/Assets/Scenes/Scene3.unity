@@ -1826,7 +1826,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   deathEffect: {fileID: 857895838}
-  audioPlayer: {fileID: 8300000, guid: 556edde74fe414b70960e138e014b680, type: 3}
+  audioPlayer: {fileID: 8300000, guid: aed97a050b6054e698b194e82dec2dbb, type: 3}
 --- !u!1001 &651203894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3481,7 +3481,7 @@ PrefabInstance:
     - target: {fileID: 8140508287765470929, guid: aba2247c8392644a68b76eec59721786, type: 3}
       propertyPath: audioPlayer
       value: 
-      objectReference: {fileID: 8300000, guid: 1ed0839b7bc2749acb0115e7870be83e, type: 3}
+      objectReference: {fileID: 8300000, guid: aed97a050b6054e698b194e82dec2dbb, type: 3}
     - target: {fileID: 8980857737226495019, guid: aba2247c8392644a68b76eec59721786, type: 3}
       propertyPath: m_Name
       value: Friendly
