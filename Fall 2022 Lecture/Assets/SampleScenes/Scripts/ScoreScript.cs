@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-
+using UnityEditor;
 
 public class ScoreScript : MonoBehaviour
 {
@@ -36,8 +36,5 @@ public class ScoreScript : MonoBehaviour
     }
      
 
-    public void QuitGame()
-    {
-        UnityEditor.EditorApplication.isPlaying = false;
-    }
+    
 }
